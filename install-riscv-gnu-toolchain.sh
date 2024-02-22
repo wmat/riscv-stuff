@@ -13,18 +13,17 @@ srcpath=$(pwd)/riscv-gnu-toolchain
 starttime=$(date)
 echo
 
-## mkdir -p ~/riscv-gnu-toolchain
-## sudo apt-get update
-## sudo apt-get install autoconf automake autotools-dev bc bison build-essential \
-##   curl flex gawk gperf libexpat-dev libmpc-dev libmpfr-dev libgmp-dev libtool \
-##   patchutils zlib1g-dev
-## git clone https://github.com/riscv/riscv-gnu-toolchain
-## pushd $srcpath
-##
-## ./configure --prefix=$binpath --with-arch=$with_arch --with-abi=$with_abi
-##
-## make
+mkdir -p ~/riscv-gnu-toolchain
+sudo apt-get update
+sudo apt-get install autoconf automake autotools-dev bc bison build-essential \
+  curl flex gawk gperf libexpat-dev libmpc-dev libmpfr-dev libgmp-dev libtool \
+  patchutils zlib1g-dev
+git clone https://github.com/riscv/riscv-gnu-toolchain
+pushd $srcpath
 
+./configure --prefix=$binpath --with-arch=$with_arch --with-abi=$with_abi
+
+make
 
 echo
 echo "Toolchain Git Version:"
