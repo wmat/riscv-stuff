@@ -6,6 +6,5 @@
 * binary2readmemh.py - Converts a raw binary file into an ascii, Verilog $readmemh
   compatible file.
 
-* 1-hello - Compile hello.c
-
+* 1-hello - Compile hello.c using riscv-gnu-toolchain
 
